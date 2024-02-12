@@ -24,7 +24,7 @@ public class SecurityConfig {
 		
 		http.authorizeHttpRequests(
 				(requests) -> requests
-				.requestMatchers(new AntPathRequestMatcher("/api/users/sign-up/**")).permitAll()
+				.requestMatchers(new AntPathRequestMatcher("/api/users/sign-up/**")).hasAuthority("ADMIN")
 				.anyRequest().authenticated());
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.formLogin(withDefaults());
