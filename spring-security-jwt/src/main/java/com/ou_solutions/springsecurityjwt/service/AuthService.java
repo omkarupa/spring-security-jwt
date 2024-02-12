@@ -1,10 +1,13 @@
-package com.ou_solutions.springsecurityjwt.repository;
+package com.ou_solutions.springsecurityjwt.service;
 
-import org.hibernate.internal.build.AllowSysOut;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.ou_solutions.springsecurityjwt.entity.User;
+import com.ou_solutions.springsecurityjwt.mapper.EntityMapperUtil;
 import com.ou_solutions.springsecurityjwt.mapper.UserRegisterationDTO;
+import com.ou_solutions.springsecurityjwt.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,6 +17,8 @@ public class AuthService {
 	
 	private final UserRepository userRepository;
 	private final EntityMapperUtil util;
+	
+
 	
 	public UserRegisterationDTO registerUser(UserRegisterationDTO userReg) throws Exception
 	{

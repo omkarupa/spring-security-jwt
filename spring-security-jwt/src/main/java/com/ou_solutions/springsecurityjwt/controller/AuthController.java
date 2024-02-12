@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ou_solutions.springsecurityjwt.mapper.UserRegisterationDTO;
-import com.ou_solutions.springsecurityjwt.repository.AuthService;
+import com.ou_solutions.springsecurityjwt.service.AuthService;
 
 import lombok.RequiredArgsConstructor;
 
